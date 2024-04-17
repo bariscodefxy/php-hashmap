@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+ini_set('memory_limit', '-1')
 use PHPUnit\Framework\TestCase;
 
 final class LargeDataTest extends TestCase
