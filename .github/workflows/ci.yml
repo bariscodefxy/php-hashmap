@@ -24,6 +24,6 @@ jobs:
       - name: PHPUnit tests
         uses: php-actions/phpunit@v3
         with:
-          version: composer
+          version: 10.5.19
           php_version: 8.0
           configuration: phpunit.xml
