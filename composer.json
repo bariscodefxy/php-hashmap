@@ -1,0 +1,21 @@
+{
+    "name": "bariscodefx/php-hashmap",
+    "description": "HashMapping for PHP.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "bariscodefx\\PHPHashMap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bariscodefx",
+            "email": "bariscodefx@protonmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
+}
