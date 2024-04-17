@@ -15,4 +15,4 @@ jobs:
         uses: php-actions/phpunit@v3
         with:
           configuration: phpunit.xml
-          memory_limit: "5120M"
+          memory_limit: "-1"
