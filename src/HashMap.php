@@ -62,6 +62,17 @@ class HashMap {
     }
 
     /**
+     * @return int
+     */
+    public function count(): int {
+        $count = 0;
+        foreach($this->buckets as $bucket) {
+            $count += count($bucket ?? []);
+        }
+        return $count;
+    }
+
+    /**
      * @param string $varname
      * @return mixed
      */
