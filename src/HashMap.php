@@ -13,17 +13,17 @@ class HashMap {
     private array $buckets;
 
     /**
-     * constructor
+     * @param int $bucketCount
      */
-    public function __construct() {
-        $this->buckets = array_fill(0, 100, null); // Fixed size array
+    public function __construct(int $bucketCount = 100) {
+        $this->buckets = array_fill(0, $bucketCount, null); // Fixed size array
     }
 
     /**
-     * @param $key
+     * @param string $key
      * @return int
      */
-    private function _hash($key): int {
+    private function _hash(string $key): int {
         $hash = 0;
         $length = strlen($key);
         for ($i = 0; $i < $length; $i++) {
@@ -33,11 +33,11 @@ class HashMap {
     }
 
     /**
-     * @param $key
-     * @param $value
+     * @param string $key
+     * @param mixed $value
      * @return void
      */
-    public function set($key, $value) {
+    public function set(string $key, mixed $value) {
         $index = $this->_hash($key);
         if (!$this->buckets[$index]) {
             $this->buckets[$index] = array();
@@ -46,10 +46,10 @@ class HashMap {
     }
 
     /**
-     * @param $key
+     * @param string $key
      * @return mixed
      */
-    public function get($key): mixed {
+    public function get(string $key): mixed {
         $index = $this->_hash($key);
         if ($this->buckets[$index]) {
             foreach ($this->buckets[$index] as $item) {
