@@ -1,5 +1,5 @@
 # php-hashmap
-HashMapping for PHP.
+Hashmap for PHP.
 
 # Install
 ```
